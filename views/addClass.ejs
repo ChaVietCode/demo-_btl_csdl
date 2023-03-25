@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('../views/partials/header.ejs'); %>
+
+    
+
+        <div class="card">
+            <div class="card-header">Thêm lớp học</div>
+            <div class="card-body">
+                <form method="POST" action="/sample_data/addClass">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label>Mã lớp</label>
+                                <input type="text" name="maLop" id="maMonHoc" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label>MSV</label>
+                                <input type="text" name="msv" id="msv" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <input type="submit" name="submit_button" class="btn btn-primary" value="Add" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <%- include('../views/partials/footer.ejs'); %>
+        
+</body>
+
+</html>
